@@ -1,0 +1,32 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    long long m,n,x,y,z,i,sum,c;
+    while(cin>>n>>m && n||m)
+    {
+       z = n-m;
+        if(m>z)
+        {
+           x = m;
+          
+        }
+        else
+        {
+            x = z;
+            
+        }
+
+        sum =1;
+        c=1;
+
+        for(i=n;i>x;i--)
+        {
+            sum = sum*i;
+            sum = sum/c;
+            c++;
+        }
+
+        cout<<n<<" things taken "<<m<<" at a time is "<<sum<<" exactly."<<endl;
+    }
+}
