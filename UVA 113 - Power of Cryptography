@@ -1,0 +1,33 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+
+    double n,p;
+    while(cin>>n>>p)
+    {
+        double  x = pow(p,(1.0/n));
+
+        cout<<fixed<<setprecision(0)<<x<<endl;
+    }
+
+    return 0;
+}
+
+
+
+2nd solution :
+
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    double n,p,x;
+    while(cin>>n>>p)
+    {
+        x = exp((log(p))/n);
+        cout<<fixed<<setprecision(0)<<x<<endl;
+    }
+
+    return 0;
+}
