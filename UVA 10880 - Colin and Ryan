@@ -1,0 +1,40 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int t,i,j;
+    cin>>t;
+    for(i=1;i<=t;i++)
+    {
+        long long c,r,x,a[100005],k;
+
+        cin>>c>>r;
+        x = c-r;
+        j=0;
+
+        for(k=1;k*k<=x;k++)
+        {
+            if(x%k==0)
+            {
+                a[j++] =k;
+                if(k*k!= x)a[j++] = x/k;
+            }
+        }
+
+
+        sort(a,a+j);
+
+        cout<<"Case #"<<i<<":";
+        if(c==r)
+            cout<<" 0";
+
+        for(k=0;k<j;k++)
+        {
+            if(a[k]>r)
+                cout<<" "<<a[k];
+        }
+
+        cout<<endl;
+    }
+    return 0;
+}
